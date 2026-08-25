@@ -8,7 +8,7 @@ export const Screen = ({ children, scroll = true, ...rest }: ScreenProps) => {
   const insets = useSafeAreaInsets();
   const theme = useTheme();
   const padding = {
-    paddingTop: insets.top + theme.space(2),
+    paddingTop: theme.space(4),
     paddingBottom: insets.bottom + theme.space(6),
   };
 

@@ -1,9 +1,5 @@
 import styled from 'styled-components/native';
 
-export const Head = styled.View`
-  margin-bottom: ${({ theme }) => theme.space(5)}px;
-`;
-
 export const Gap = styled.View`
   height: ${({ theme }) => theme.space(4)}px;
 `;

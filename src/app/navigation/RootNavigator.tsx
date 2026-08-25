@@ -1,7 +1,7 @@
 import { DefaultTheme, NavigationContainer, Theme as NavTheme } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useTheme } from 'styled-components/native';
-import { Icon, IconName } from 'src/shared/ui';
+import { Header, Icon, IconName } from 'src/shared/ui';
 import { HomeScreen } from 'src/screens/home';
 import { SendScreen } from 'src/screens/send';
 import { SettingsScreen } from 'src/screens/settings';
@@ -34,7 +34,6 @@ export const RootNavigator = () => {
     <NavigationContainer theme={navTheme}>
       <Tab.Navigator
         screenOptions={({ route }) => ({
-          headerShown: false,
           tabBarActiveTintColor: theme.colors.primary,
           tabBarInactiveTintColor: theme.colors.textMuted,
           tabBarStyle: {
@@ -53,14 +52,31 @@ export const RootNavigator = () => {
         <Tab.Screen
           name="Home"
           component={HomeScreen}
+          options={{
+            header: () => (
+              <Header
+                title="demo·wallet"
+                showLogo
+              />
+            ),
+          }}
         />
         <Tab.Screen
           name="Send"
           component={SendScreen}
+          options={{
+            header: () => (
+              <Header
+                title="Send"
+                subtitle="Transfer assets to any address"
+              />
+            ),
+          }}
         />
         <Tab.Screen
           name="Settings"
           component={SettingsScreen}
+          options={{ header: () => <Header title="Settings" /> }}
         />
       </Tab.Navigator>
     </NavigationContainer>

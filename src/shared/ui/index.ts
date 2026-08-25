@@ -1,4 +1,6 @@
 export { Text } from './Text';
+export { Header } from './Header';
+export type { HeaderProps } from './Header';
 export { Screen } from './Screen';
 export { Card } from './Card';
 export { Button } from './Button';

@@ -3,14 +3,10 @@ import { CURRENCIES, uiSettingsStore } from 'src/entities/ui-settings';
 import { ThemeToggle } from 'src/features/theme-toggle';
 import { Card, Screen, Text } from 'src/shared/ui';
 import { APP_VERSION } from './constants';
-import { Chip, Chips, Gap, Head, Row } from './SettingsScreen.styles';
+import { Chip, Chips, Gap, Row } from './SettingsScreen.styles';
 
 export const SettingsScreen = observer(() => (
   <Screen>
-    <Head>
-      <Text variant="title">Settings</Text>
-    </Head>
-
     <Card>
       <Text
         variant="caption"
