@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "demo-wallet",
+    "slug": "demo-wallet",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "demowallet",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#0E0B1A",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.demo.wallet"
+    },
+    "android": {
+      "package": "com.demo.wallet",
+      "adaptiveIcon": {
+        "backgroundColor": "#0E0B1A",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
