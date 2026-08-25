@@ -8,3 +8,4 @@ export { Skeleton } from './Skeleton';
 export { LogoMark } from './Logo';
 export { Icon } from './Icon';
 export type { IconName } from './Icon';
+export { WarpBackground } from './WarpBackground';

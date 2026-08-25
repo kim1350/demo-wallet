@@ -1,4 +1,4 @@
-import { ThemeColors } from 'src/shared/theme';
+import { ThemeColors } from '@shared/theme';
 
 export type Variant = 'display' | 'title' | 'subtitle' | 'body' | 'caption';
 

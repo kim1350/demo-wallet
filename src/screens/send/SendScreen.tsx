@@ -1,5 +1,5 @@
-import { SendForm } from 'src/features/send-form';
-import { Screen } from 'src/shared/ui';
+import { SendForm } from '@features/send-form';
+import { Screen } from '@shared/ui';
 
 export const SendScreen = () => (
   <Screen>

@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { mockClient, queryKeys, SendRequest } from 'src/shared/api';
+import { mockClient, queryKeys, SendRequest } from '@shared/api';
 
 export const useTransactions = () =>
   useQuery({

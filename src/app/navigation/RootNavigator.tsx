@@ -1,10 +1,10 @@
 import { DefaultTheme, NavigationContainer, Theme as NavTheme } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useTheme } from 'styled-components/native';
-import { Header, Icon, IconName } from 'src/shared/ui';
-import { HomeScreen } from 'src/screens/home';
-import { SendScreen } from 'src/screens/send';
-import { SettingsScreen } from 'src/screens/settings';
+import { Header, Icon, IconName } from '@shared/ui';
+import { HomeScreen } from '@screens/home';
+import { SendScreen } from '@screens/send';
+import { SettingsScreen } from '@screens/settings';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,7 +22,7 @@ export const RootNavigator = () => {
     dark: theme.mode === 'dark',
     colors: {
       ...DefaultTheme.colors,
-      background: theme.colors.bg,
+      background: 'transparent',
       card: theme.colors.surface,
       text: theme.colors.text,
       border: theme.colors.border,

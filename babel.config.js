@@ -7,10 +7,20 @@ module.exports = function (api) {
         'module-resolver',
         {
           root: ['./'],
-          alias: { src: './src' },
+          alias: {
+            src: './src',
+            '@app': './src/app',
+            '@screens': './src/screens',
+            '@widgets': './src/widgets',
+            '@features': './src/features',
+            '@entities': './src/entities',
+            '@shared': './src/shared',
+          },
           extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
         },
       ],
+      // react-native-worklets/plugin (Reanimated 4) MUST be last
+      'react-native-worklets/plugin',
     ],
   };
 };

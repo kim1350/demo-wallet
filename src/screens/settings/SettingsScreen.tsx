@@ -1,7 +1,7 @@
 import { observer } from 'mobx-react-lite';
-import { CURRENCIES, uiSettingsStore } from 'src/entities/ui-settings';
-import { ThemeToggle } from 'src/features/theme-toggle';
-import { Card, Screen, Text } from 'src/shared/ui';
+import { CURRENCIES, uiSettingsStore } from '@entities/ui-settings';
+import { ThemeToggle } from '@features/theme-toggle';
+import { Card, Screen, Text } from '@shared/ui';
 import { APP_VERSION } from './constants';
 import { Chip, Chips, Gap, Row } from './SettingsScreen.styles';
 

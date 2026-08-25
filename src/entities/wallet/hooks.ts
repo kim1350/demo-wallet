@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { mockClient, queryKeys } from 'src/shared/api';
+import { mockClient, queryKeys } from '@shared/api';
 
 export const useBalance = () =>
   useQuery({

@@ -1,7 +1,7 @@
 import { Switch } from 'react-native';
 import { observer } from 'mobx-react-lite';
 import { useTheme } from 'styled-components/native';
-import { uiSettingsStore } from 'src/entities/ui-settings';
+import { uiSettingsStore } from '@entities/ui-settings';
 
 export const ThemeToggle = observer(() => {
   const theme = useTheme();

@@ -1,8 +1,8 @@
 import { observer } from 'mobx-react-lite';
-import { useAssets } from 'src/entities/wallet';
-import { uiSettingsStore } from 'src/entities/ui-settings';
-import { Card, Skeleton, Text } from 'src/shared/ui';
-import { formatAmount, formatFiat } from 'src/shared/lib/format';
+import { useAssets } from '@entities/wallet';
+import { uiSettingsStore } from '@entities/ui-settings';
+import { Card, Skeleton, Text } from '@shared/ui';
+import { formatAmount, formatFiat } from '@shared/lib/format';
 import { Body, Divider, Dot, Right, Row } from './AssetList.styles';
 
 export const AssetList = observer(() => {

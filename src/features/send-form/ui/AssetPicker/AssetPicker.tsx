@@ -1,5 +1,5 @@
-import { Text } from 'src/shared/ui';
-import { formatAmount } from 'src/shared/lib/format';
+import { formatAmount } from '@shared/lib/format';
+import { Text } from '@shared/ui';
 import { Chip, Row } from './AssetPicker.styles';
 import { AssetPickerProps } from './AssetPicker.types';
 

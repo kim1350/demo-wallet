@@ -1,10 +1,10 @@
 import { useMemo } from 'react';
 import { View } from 'react-native';
 import { Controller, useForm, useWatch } from 'react-hook-form';
-import { Asset, useAssets } from 'src/entities/wallet';
-import { useSendMutation } from 'src/entities/transaction';
-import { Button, Card, Icon, Skeleton, Text } from 'src/shared/ui';
-import { formatAmount, shortenAddress } from 'src/shared/lib/format';
+import { Asset, useAssets } from '@entities/wallet';
+import { useSendMutation } from '@entities/transaction';
+import { Button, Card, Icon, Skeleton, Text } from '@shared/ui';
+import { formatAmount, shortenAddress } from '@shared/lib/format';
 import { SendFormValues } from '../../types';
 import { AssetPicker } from '../AssetPicker';
 import { Group, Input, SuccessIcon } from './SendForm.styles';

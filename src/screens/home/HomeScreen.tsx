@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { RefreshControl, View } from 'react-native';
 import { useQueryClient } from '@tanstack/react-query';
 import { useTheme } from 'styled-components/native';
-import { Screen } from 'src/shared/ui';
-import { AssetList, BalanceCard, TransactionList } from 'src/widgets/home';
+import { Screen } from '@shared/ui';
+import { AssetList, BalanceCard, TransactionList } from '@widgets/home';
 import { Gap } from './HomeScreen.styles';
 
 export const HomeScreen = () => {

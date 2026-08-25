@@ -1,7 +1,7 @@
 import { useTheme } from 'styled-components/native';
-import { Icon, Text } from 'src/shared/ui';
-import { formatAmount, formatDate, shortenAddress } from 'src/shared/lib/format';
-import { Transaction } from 'src/shared/api';
+import { Icon, Text } from '@shared/ui';
+import { formatAmount, formatDate, shortenAddress } from '@shared/lib/format';
+import { Transaction } from '@shared/api';
 import { Amount, Badge, Body, Row } from './TransactionRow.styles';
 
 export const TransactionRow = ({ tx }: { tx: Transaction }) => {

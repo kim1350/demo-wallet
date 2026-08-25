@@ -1,4 +1,4 @@
-import { ThemeMode } from 'src/shared/theme';
+import { ThemeMode } from '@shared/theme';
 
 export type DisplayCurrency = 'USD' | 'EUR' | 'GBP';
 

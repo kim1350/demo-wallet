@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { makeAutoObservable, runInAction } from 'mobx';
-import { ThemeMode } from 'src/shared/theme';
+import { ThemeMode } from '@shared/theme';
 import { CURRENCIES, STORAGE_KEY } from './constants';
 import { DisplayCurrency, PersistedSettings } from './types';
 

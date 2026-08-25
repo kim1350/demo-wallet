@@ -1,9 +1,9 @@
 import { View } from 'react-native';
 import { observer } from 'mobx-react-lite';
-import { useBalance } from 'src/entities/wallet';
-import { uiSettingsStore } from 'src/entities/ui-settings';
-import { Card, LogoMark, Skeleton, Text } from 'src/shared/ui';
-import { formatFiat } from 'src/shared/lib/format';
+import { useBalance } from '@entities/wallet';
+import { uiSettingsStore } from '@entities/ui-settings';
+import { Card, LogoMark, Skeleton, Text } from '@shared/ui';
+import { formatFiat } from '@shared/lib/format';
 import { Change, Header } from './BalanceCard.styles';
 
 export const BalanceCard = observer(() => {

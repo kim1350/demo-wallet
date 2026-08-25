@@ -1,4 +1,4 @@
-import { Asset } from 'src/entities/wallet';
+import { Asset } from '@entities/wallet';
 
 export interface AssetPickerProps {
   assets: Asset[];

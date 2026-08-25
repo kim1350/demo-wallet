@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
-import { TransactionRow, useTransactions } from 'src/entities/transaction';
-import { Card, Skeleton, Text } from 'src/shared/ui';
+import { TransactionRow, useTransactions } from '@entities/transaction';
+import { Card, Skeleton, Text } from '@shared/ui';
 import { Divider, Loading } from './TransactionList.styles';
 
 const RECENT_LIMIT = 5;

@@ -6,4 +6,4 @@ export type {
   TransactionStatus,
   SendRequest,
   SendResult,
-} from 'src/shared/api';
+} from '@shared/api';
