@@ -5,8 +5,8 @@ A small, self-contained crypto-wallet demo built with **React Native + Expo** an
 **TanStack Query** for server state on top of a fully local mock backend — no accounts,
 no network, no real assets, no keys.
 
-> This is a portfolio/demonstration app. Everything (balances, assets, transactions) is
-> generated in-memory so the project runs entirely offline.
+> Portfolio/demonstration app. Everything (balances, assets, transactions) is generated
+> in-memory, so the project runs entirely offline.
 
 ## Features
 
@@ -18,16 +18,53 @@ no network, no real assets, no keys.
 
 ## Stack
 
-| Concern        | Choice                                             |
-| -------------- | -------------------------------------------------- |
-| Runtime        | React Native `0.86` · Expo SDK `57`                |
-| Server state   | TanStack Query                                     |
-| UI state       | MobX (theme + display currency)                    |
-| Navigation     | React Navigation (bottom tabs)                     |
-| Forms          | React Hook Form                                    |
-| Styling        | styled-components (typed theme, light/dark)        |
-| Persistence    | AsyncStorage (UI preferences only)                 |
-| Vector / logo  | react-native-svg (inline, no raster brand assets)  |
+| Concern       | Choice                                            |
+| ------------- | ------------------------------------------------- |
+| Runtime       | React Native `0.86` · Expo SDK `57` · React `19`  |
+| Language      | TypeScript                                        |
+| Server state  | TanStack Query                                    |
+| UI state      | MobX (theme + display currency)                   |
+| Navigation    | React Navigation (native stack + bottom tabs)     |
+| Forms         | React Hook Form                                   |
+| Styling       | styled-components (typed theme, light/dark)       |
+| Animation     | Reanimated · Skia (WarpBackground shader)         |
+| Persistence   | AsyncStorage · SecureStore                        |
+| Vector / logo | react-native-svg (inline, no raster brand assets) |
+
+## Prerequisites
+
+- **Node.js** 20+ and npm
+- **Watchman** (macOS, recommended)
+- For native dev builds: **Xcode** (iOS) and/or **Android Studio** (Android)
+
+## Getting started
+
+```bash
+npm install
+npm start          # Metro bundler — press i / a / w, or scan the QR in Expo Go
+```
+
+This app uses native modules (Skia, Reanimated, SecureStore) and ships `ios/` and
+`android/` folders, so run a **development build** rather than Expo Go:
+
+```bash
+npm run ios        # build + run on iOS simulator / device
+npm run android    # build + run on Android emulator / device
+npm run web        # run in the browser
+```
+
+## Scripts
+
+```bash
+npm start           # expo start
+npm run ios         # expo run:ios
+npm run android     # expo run:android
+npm run web         # expo start --web
+npm run typecheck   # tsc --noEmit
+npm run lint        # eslint .
+npm run format      # prettier --write "src/**/*.{ts,tsx}"
+npm test            # jest (jest-expo)
+```
 
 ## Architecture
 
@@ -47,23 +84,9 @@ src/
   shared/     api (mock client) · ui (primitives) · theme · lib
 ```
 
-`src/*` is aliased to `src/` (via `babel-plugin-module-resolver` + `tsconfig` paths).
+`@app`, `@shared`, … aliases map to `src/*` (via `babel-plugin-module-resolver` +
+`tsconfig` paths).
 
 The mock backend lives in [`src/shared/api/mockClient.ts`](src/shared/api/mockClient.ts):
 it stores state in memory and resolves each call after a short delay to exercise real
 loading states. Entities wrap it in typed query/mutation hooks.
-
-## Run
-
-```bash
-npm install
-npm start        # then open in Expo Go, or press i / a
-```
-
-## Scripts
-
-```bash
-npm run typecheck   # tsc --noEmit
-npm run lint        # eslint
-npm run format      # prettier --write
-```
