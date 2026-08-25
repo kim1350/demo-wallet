@@ -1,20 +1,10 @@
 import { useState } from 'react';
 import { RefreshControl, View } from 'react-native';
 import { useQueryClient } from '@tanstack/react-query';
-import styled, { useTheme } from 'styled-components/native';
+import { useTheme } from 'styled-components/native';
 import { LogoMark, Screen, Text } from 'src/shared/ui';
 import { AssetList, BalanceCard, TransactionList } from 'src/widgets/home';
-
-const Header = styled.View`
-  flex-direction: row;
-  align-items: center;
-  gap: ${({ theme }) => theme.space(2.5)}px;
-  margin-bottom: ${({ theme }) => theme.space(5)}px;
-`;
-
-const Gap = styled.View`
-  height: ${({ theme }) => theme.space(4)}px;
-`;
+import { Gap, Header } from './HomeScreen.styles';
 
 export const HomeScreen = () => {
   const theme = useTheme();

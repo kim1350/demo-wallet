@@ -1,22 +1,8 @@
-import { ReactNode } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { ScrollViewProps } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import styled, { useTheme } from 'styled-components/native';
-
-const Root = styled.View`
-  flex: 1;
-  background-color: ${({ theme }) => theme.colors.bg};
-`;
-
-const Scroll = styled.ScrollView`
-  flex: 1;
-`;
-
-interface ScreenProps extends ScrollViewProps {
-  children: ReactNode;
-  scroll?: boolean;
-}
+import { useTheme } from 'styled-components/native';
+import { Root, Scroll } from './Screen.styles';
+import { ScreenProps } from './Screen.types';
 
 export const Screen = ({ children, scroll = true, ...rest }: ScreenProps) => {
   const insets = useSafeAreaInsets();

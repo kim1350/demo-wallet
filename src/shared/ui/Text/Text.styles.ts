@@ -1,18 +1,5 @@
 import styled from 'styled-components/native';
-import { ThemeColors } from 'src/shared/theme';
-
-type Variant = 'display' | 'title' | 'subtitle' | 'body' | 'caption';
-type ColorKey = keyof Pick<
-  ThemeColors,
-  'text' | 'textMuted' | 'primary' | 'accent' | 'danger' | 'success' | 'onPrimary'
->;
-
-interface TextProps {
-  variant?: Variant;
-  color?: ColorKey;
-  weight?: '400' | '500' | '600' | '700';
-  align?: 'left' | 'center' | 'right';
-}
+import { TextProps, Variant } from './Text.types';
 
 const SIZES: Record<Variant, { size: number; line: number; weight: TextProps['weight'] }> = {
   display: { size: 34, line: 40, weight: '700' },

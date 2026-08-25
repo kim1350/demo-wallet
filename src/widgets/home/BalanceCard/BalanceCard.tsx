@@ -1,26 +1,10 @@
 import { View } from 'react-native';
 import { observer } from 'mobx-react-lite';
-import styled from 'styled-components/native';
 import { useBalance } from 'src/entities/wallet';
 import { uiSettingsStore } from 'src/entities/ui-settings';
 import { Card, LogoMark, Skeleton, Text } from 'src/shared/ui';
 import { formatFiat } from 'src/shared/lib/format';
-
-const Header = styled.View`
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: ${({ theme }) => theme.space(4)}px;
-`;
-
-const Change = styled.View<{ positive: boolean }>`
-  align-self: flex-start;
-  padding-vertical: 4px;
-  padding-horizontal: ${({ theme }) => theme.space(2.5)}px;
-  border-radius: ${({ theme }) => theme.radius.pill}px;
-  background-color: ${({ theme }) => theme.colors.surfaceAlt};
-  margin-top: ${({ theme }) => theme.space(2)}px;
-`;
+import { Change, Header } from './BalanceCard.styles';
 
 export const BalanceCard = observer(() => {
   const { data: balance, isLoading } = useBalance();

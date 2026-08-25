@@ -1,19 +1,9 @@
 import { Fragment } from 'react';
-import styled from 'styled-components/native';
 import { TransactionRow, useTransactions } from 'src/entities/transaction';
 import { Card, Skeleton, Text } from 'src/shared/ui';
+import { Divider, Loading } from './TransactionList.styles';
 
 const RECENT_LIMIT = 5;
-
-const Divider = styled.View`
-  height: 1px;
-  background-color: ${({ theme }) => theme.colors.border};
-`;
-
-const Loading = styled.View`
-  gap: ${({ theme }) => theme.space(3)}px;
-  margin-top: ${({ theme }) => theme.space(3)}px;
-`;
 
 export const TransactionList = () => {
   const { data: transactions, isLoading } = useTransactions();

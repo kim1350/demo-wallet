@@ -1,10 +1,6 @@
-import styled from 'styled-components/native';
 import { SendForm } from 'src/features/send-form';
 import { Screen, Text } from 'src/shared/ui';
-
-const Head = styled.View`
-  margin-bottom: ${({ theme }) => theme.space(5)}px;
-`;
+import { Head } from './SendScreen.styles';
 
 export const SendScreen = () => (
   <Screen>

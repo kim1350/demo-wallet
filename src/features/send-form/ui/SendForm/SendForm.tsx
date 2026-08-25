@@ -1,39 +1,13 @@
 import { useMemo } from 'react';
 import { View } from 'react-native';
 import { Controller, useForm, useWatch } from 'react-hook-form';
-import styled from 'styled-components/native';
 import { Asset, useAssets } from 'src/entities/wallet';
 import { useSendMutation } from 'src/entities/transaction';
 import { Button, Card, Icon, Skeleton, Text } from 'src/shared/ui';
 import { formatAmount, shortenAddress } from 'src/shared/lib/format';
-import { SendFormValues } from '../types';
-import { AssetPicker } from './AssetPicker';
-
-const Group = styled.View`
-  gap: ${({ theme }) => theme.space(2)}px;
-  margin-bottom: ${({ theme }) => theme.space(4)}px;
-`;
-
-const Input = styled.TextInput`
-  background-color: ${({ theme }) => theme.colors.surface};
-  border-width: 1px;
-  border-color: ${({ theme }) => theme.colors.border};
-  border-radius: ${({ theme }) => theme.radius.md}px;
-  padding: ${({ theme }) => theme.space(3.5)}px;
-  color: ${({ theme }) => theme.colors.text};
-  font-size: 15px;
-`;
-
-const SuccessIcon = styled.View`
-  align-self: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 32px;
-  align-items: center;
-  justify-content: center;
-  background-color: ${({ theme }) => theme.colors.surfaceAlt};
-  margin-bottom: ${({ theme }) => theme.space(3)}px;
-`;
+import { SendFormValues } from '../../types';
+import { AssetPicker } from '../AssetPicker';
+import { Group, Input, SuccessIcon } from './SendForm.styles';
 
 const SendFormFields = ({ assets }: { assets: Asset[] }) => {
   const mutation = useSendMutation();

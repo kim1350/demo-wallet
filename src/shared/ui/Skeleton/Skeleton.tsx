@@ -1,12 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Animated, DimensionValue } from 'react-native';
+import { Animated } from 'react-native';
 import { useTheme } from 'styled-components/native';
-
-interface SkeletonProps {
-  width?: DimensionValue;
-  height?: number;
-  radius?: number;
-}
+import { SkeletonProps } from './Skeleton.types';
 
 export const Skeleton = ({ width = '100%', height = 16, radius = 8 }: SkeletonProps) => {
   const theme = useTheme();

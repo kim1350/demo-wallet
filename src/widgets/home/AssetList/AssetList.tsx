@@ -1,38 +1,9 @@
 import { observer } from 'mobx-react-lite';
-import styled from 'styled-components/native';
 import { useAssets } from 'src/entities/wallet';
 import { uiSettingsStore } from 'src/entities/ui-settings';
 import { Card, Skeleton, Text } from 'src/shared/ui';
 import { formatAmount, formatFiat } from 'src/shared/lib/format';
-
-const Row = styled.View`
-  flex-direction: row;
-  align-items: center;
-  padding-vertical: ${({ theme }) => theme.space(3)}px;
-  gap: ${({ theme }) => theme.space(3)}px;
-`;
-
-const Dot = styled.View`
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
-  align-items: center;
-  justify-content: center;
-  background-color: ${({ theme }) => theme.colors.surfaceAlt};
-`;
-
-const Body = styled.View`
-  flex: 1;
-`;
-
-const Right = styled.View`
-  align-items: flex-end;
-`;
-
-const Divider = styled.View`
-  height: 1px;
-  background-color: ${({ theme }) => theme.colors.border};
-`;
+import { Body, Divider, Dot, Right, Row } from './AssetList.styles';
 
 export const AssetList = observer(() => {
   const { data: assets, isLoading } = useAssets();

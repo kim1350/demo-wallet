@@ -1,40 +1,9 @@
 import { observer } from 'mobx-react-lite';
-import styled from 'styled-components/native';
 import { CURRENCIES, uiSettingsStore } from 'src/entities/ui-settings';
 import { ThemeToggle } from 'src/features/theme-toggle';
 import { Card, Screen, Text } from 'src/shared/ui';
 import { APP_VERSION } from './constants';
-
-const Head = styled.View`
-  margin-bottom: ${({ theme }) => theme.space(5)}px;
-`;
-
-const Gap = styled.View`
-  height: ${({ theme }) => theme.space(4)}px;
-`;
-
-const Row = styled.View`
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding-vertical: ${({ theme }) => theme.space(2)}px;
-`;
-
-const Chips = styled.View`
-  flex-direction: row;
-  gap: ${({ theme }) => theme.space(2)}px;
-  margin-top: ${({ theme }) => theme.space(3)}px;
-`;
-
-const Chip = styled.Pressable<{ active: boolean }>`
-  flex: 1;
-  align-items: center;
-  padding-vertical: ${({ theme }) => theme.space(3)}px;
-  border-radius: ${({ theme }) => theme.radius.md}px;
-  border-width: 1px;
-  border-color: ${({ theme, active }) => (active ? theme.colors.primary : theme.colors.border)};
-  background-color: ${({ theme, active }) => (active ? theme.colors.surfaceAlt : theme.colors.surface)};
-`;
+import { Chip, Chips, Gap, Head, Row } from './SettingsScreen.styles';
 
 export const SettingsScreen = observer(() => (
   <Screen>

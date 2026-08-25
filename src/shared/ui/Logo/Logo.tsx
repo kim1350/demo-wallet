@@ -1,9 +1,6 @@
 import Svg, { Defs, LinearGradient, Path, Stop } from 'react-native-svg';
 import { useTheme } from 'styled-components/native';
-
-interface LogoProps {
-  size?: number;
-}
+import { LogoProps } from './Logo.types';
 
 // Abstract faceted prism mark — geometric, brand-neutral, no external asset.
 export const LogoMark = ({ size = 40 }: LogoProps) => {

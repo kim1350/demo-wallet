@@ -1,12 +1,5 @@
 import Svg, { Path } from 'react-native-svg';
-
-export type IconName = 'home' | 'send' | 'settings' | 'arrowUp' | 'arrowDown' | 'check';
-
-interface IconProps {
-  name: IconName;
-  size?: number;
-  color: string;
-}
+import { IconName, IconProps } from './Icon.types';
 
 const PATHS: Record<IconName, string> = {
   home: 'M3 10.5 12 3l9 7.5M5 9.5V20h5v-6h4v6h5V9.5',

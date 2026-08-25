@@ -1,0 +1,15 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always",
+    "source.organizeImports": "always"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "i18n-ally.localesPaths": [
+    "src/shared/i18n",
+    "ios/Pods/RCT-Folly/folly/lang",
+    "ios/Pods/boost/boost/predef/language"
+  ],
+  "i18n-ally.keystyle": "nested"
+}
